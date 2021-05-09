@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.5.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cetc.bigdata.gx.datagroup</groupId>
+    <artifactId>population</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <modules>
+        <module>media-client</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-boot-starter-web.version>2.3.5.RELEASE</spring-boot-starter-web.version>
+        <spring-boot-starter-test.version>2.3.5.RELEASE</spring-boot-starter-test.version>
+        <spring-boot-devtools.version>2.3.5.RELEASE</spring-boot-devtools.version>
+        <springloaded.version>1.2.4.RELEASE</springloaded.version>
+
+        <springfox-swagger2.version>2.6.1</springfox-swagger2.version>
+        <springfox-swagger-ui.version>2.6.1</springfox-swagger-ui.version>
+
+        <mysql-connector-java.version>8.0.22</mysql-connector-java.version>
+        <mybatis-spring-boot-starter.version>2.1.3</mybatis-spring-boot-starter.version>
+        <mybatis-spring.version>2.0.5</mybatis-spring.version>
+        <mybatis-plus-boot-starter.version>3.3.2</mybatis-plus-boot-starter.version>
+        <mybatis-plus-generator.version>3.3.0</mybatis-plus-generator.version>
+
+        <velocity-engine-core.version>2.0</velocity-engine-core.version>
+        <lombok.version>1.18.16</lombok.version>
+        <hibernate-validator>6.1.6.Final</hibernate-validator>
+        <junit-jupiter.vsersion>5.6.3</junit-jupiter.vsersion>
+        <fastjson.version>1.2.58</fastjson.version>
+
+        <spring-cloud-starter-openfeign.version>2.2.5.RELEASE</spring-cloud-starter-openfeign.version>
+        <spring-cloud-starter-alibaba-nacos-discovery.version>2.2.1.RELEASE</spring-cloud-starter-alibaba-nacos-discovery.version>
+        <spring-cloud-starter-alibaba-nacos-config.version>2.2.1.RELEASE</spring-cloud-starter-alibaba-nacos-config.version>
+        <poi-ooxml.version>3.11</poi-ooxml.version>
+        <spring-cloud-starter-gateway.version>2.2.6.RELEASE</spring-cloud-starter-gateway.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-core</artifactId>
+                <version>1.8.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+                <version>2.2.5.RELEASE</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

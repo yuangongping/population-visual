@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cetc.bigdata.gx.datagroup.population.dao.PopulationDao">
+    <select id="getMapData" resultType="cetc.bigdata.gx.datagroup.population.vo.MapOutVo">
+        SELECT
+            p.region as name,
+            p.renkoushu as value
+        FROM
+            population as p
+        ${ew.customSqlSegment}
+    </select>
+
+    <select id="getSexM" resultType="cetc.bigdata.gx.datagroup.population.vo.MapOutVo">
+        SELECT
+            p.region as name,
+            p.renkoushu_nan as value
+        FROM
+            population as p
+        ${ew.customSqlSegment}
+    </select>
+
+
+    <select id="getSexW" resultType="cetc.bigdata.gx.datagroup.population.vo.MapOutVo">
+        SELECT
+            p.region as name,
+            p.renkoushu_nv as value
+        FROM
+            population as p
+        ${ew.customSqlSegment}
+    </select>
+
+    <select id="getAge" resultType="cetc.bigdata.gx.datagroup.population.vo.AgeOutVo">
+        SELECT
+            p.region as name,
+            p.age0 as age0,
+            p.age1 as age1,
+            p.age2 as age2
+        FROM
+            population as p
+        ${ew.customSqlSegment}
+    </select>
+
+    <select id="getBornDead" resultType="cetc.bigdata.gx.datagroup.population.vo.BornDeadVo">
+        SELECT
+            p.region as name,
+            p.born as born,
+            p.born_m as born_m,
+            p.born_w as born_w,
+            p.dead as dead,
+            p.dead_m as dead_m,
+            p.dead_w as dead_w
+        FROM
+            population as p
+        ${ew.customSqlSegment}
+    </select>
+
+    <select id="getMarry" resultType="cetc.bigdata.gx.datagroup.population.vo.MarryVo">
+        SELECT
+            p.region as name,
+            p.weihun as weihun,
+            p.weihun_m as weihun_m,
+            p.weihun_w as weihun_w,
+            p.yihun as yihun,
+            p.yihun_m as yihun_m,
+            p.yihun_w as yihun_w,
+            p.lihun as lihun,
+            p.lihun_m as lihun_m,
+            p.lihun_w as lihun_w
+        FROM
+            population as p
+        ${ew.customSqlSegment}
+    </select>
+</mapper>

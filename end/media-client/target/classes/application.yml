@@ -1,0 +1,27 @@
+server:
+  port: 7000
+  servlet:
+    context-path:
+      /population
+
+spring:
+  application:
+    name: population
+  devtools:
+    livereload:
+      enabled: true
+  datasource:
+      url: jdbc:mysql://localhost:3306/population?characterEncoding=UTF8&&autoReconnect=true&&serverTimezone=Asia/Shanghai
+      driver: com.mysql.jdbc.Driver
+      username: root
+      password: root
+
+
+mybatis:
+  mapper-locations: classpath:/mapper/*xml
+  typeAliasesPackage: cetc.bigdata.gx.datagroup.nsg.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
